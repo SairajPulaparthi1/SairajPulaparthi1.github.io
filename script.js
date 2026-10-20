@@ -1,11 +1,11 @@
 // ==========================================================================
 // SAIFLIX / STREAMING PORTFOLIO SCRIPT
-// Implements Front Page Entry, Profile Switching, and Modal Details
+// Implements Front Page Entry, Profile Switching, Detail Modals & Resume Viewer
 // ==========================================================================
 
 const modalData = {
   'opswat-pm2': {
-    badge: 'FLAGSHIP SERIES • OPSWAT',
+    badge: 'OPSWAT',
     title: 'Product Manager Intern II',
     company: 'OPSWAT • Tampa, FL / Remote (Aug 2025 – Present)',
     tag: 'Hardware & Cybersecurity',
@@ -18,7 +18,7 @@ const modalData = {
     pills: ['MetaDefender', 'Media Firewall', 'OTG Security', 'PRD', 'Hardware Prototyping', 'BCM Revision']
   },
   'opswat-pm1': {
-    badge: 'FOUNDATIONAL SEASON • OPSWAT',
+    badge: 'OPSWAT',
     title: 'Product Manager Intern I',
     company: 'OPSWAT • Tampa, FL (May 2025 – Aug 2025)',
     tag: 'B2B & Operations',
@@ -31,7 +31,7 @@ const modalData = {
     pills: ['Jira / JQL', 'Power BI', 'PCB Assembly', 'B2B Requirements', 'Roadmap Automation']
   },
   'medlaunch': {
-    badge: 'HEALTHCARE TECH • ACCREDITATION',
+    badge: 'MEDLAUNCH CONCEPTS',
     title: 'Product Manager Intern',
     company: 'MedLaunch Concepts • Clearwater, FL (Aug 2025 – Jan 2026)',
     tag: 'Healthcare & QA',
@@ -44,7 +44,7 @@ const modalData = {
     pills: ['QA Leadership', 'Healthcare Standards', 'User Portal', 'Cybersecurity Compliance']
   },
   'uf-it': {
-    badge: 'CAMPUS SYSTEMS • INFRASTRUCTURE',
+    badge: 'UNIVERSITY OF FLORIDA',
     title: 'Information Technology Intern',
     company: 'University of Florida Research Information Services • Gainesville, FL (Aug 2023 – Present)',
     tag: 'Enterprise Support',
@@ -57,9 +57,9 @@ const modalData = {
     pills: ['Salesforce', 'ITIL Support', 'Network Troubleshooting', 'Data Security Provisioning']
   },
   'proj-compliance': {
-    badge: 'AI & PRODUCT PRD',
+    badge: 'TECHNICAL BUILD',
     title: 'Automated Security & Compliance Gap Analyzer',
-    company: 'Independent Technical Build (Python, Streamlit, LLM API, GitHub)',
+    company: 'Technical Project (Python, Streamlit, LLM API, GitHub)',
     tag: 'AI / Automation',
     date: 'Python • Streamlit • LLM API',
     bullets: [
@@ -69,9 +69,9 @@ const modalData = {
     pills: ['Python', 'Streamlit', 'LLM API', 'PRD Authoring', 'Trade-off Analysis', 'GitHub']
   },
   'proj-hardware': {
-    badge: 'PERIPHERAL LOG DATA PIPELINE',
+    badge: 'TECHNICAL BUILD',
     title: 'Hardware Vulnerability Triage Dashboard',
-    company: 'Independent Technical Build (Python, SQL, Pandas, Matplotlib, Seaborn)',
+    company: 'Technical Project (Python, SQL, Pandas, Matplotlib, Seaborn)',
     tag: 'Data Engineering',
     date: 'Python • SQL • Pandas',
     bullets: [
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const brandLogo = document.getElementById('brandLogo');
   const mainNav = document.getElementById('mainNav');
 
-  // Modal elements
+  // Detail Modal Elements
   const detailModal = document.getElementById('detailModal');
   const modalCloseBtn = document.getElementById('modalCloseBtn');
   const modalBadge = document.getElementById('modalBadge');
@@ -103,15 +103,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalBullets = document.getElementById('modalBullets');
   const modalPills = document.getElementById('modalPills');
 
-  // 1. Profile selection card interaction
+  // Resume Modal Elements
+  const resumeModal = document.getElementById('resumeModal');
+  const resumeCloseBtn = document.getElementById('resumeCloseBtn');
+  const heroResumeBtn = document.getElementById('heroResumeBtn');
+  const navResumeBtn = document.getElementById('navResumeBtn');
+  const contactResumeBtn = document.getElementById('contactResumeBtn');
+
+  // 1. Profile selection interaction
   profileCards.forEach(card => {
     card.addEventListener('click', () => {
       profileCards.forEach(c => c.classList.remove('active-profile'));
       card.classList.add('active-profile');
-      const profile = card.dataset.profile;
       document.querySelector('.mini-profile-name').textContent = card.querySelector('.profile-name').textContent;
-      
-      // Auto-enter on double click or click directly
       triggerEnter();
     });
   });
@@ -137,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mainDashboard.classList.remove('hidden');
   }
 
-  // 3. Switch Profile / Return to Splash
+  // 3. Return to Splash Screen
   function returnToSplash() {
     frontSplash.classList.remove('hidden');
     frontSplash.classList.remove('fade-out');
@@ -159,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 5. Open Modal on Card or Button Click
+  // 5. Open Card Details Modal
   function openModal(key) {
     const data = modalData[key];
     if (!data) return;
@@ -170,7 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
     modalDate.textContent = data.date;
     modalTag.textContent = data.tag;
 
-    // Populate bullets
     modalBullets.innerHTML = '';
     data.bullets.forEach(b => {
       const li = document.createElement('li');
@@ -178,7 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
       modalBullets.appendChild(li);
     });
 
-    // Populate pills
     modalPills.innerHTML = '';
     data.pills.forEach(p => {
       const span = document.createElement('span');
@@ -196,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'auto';
   }
 
-  // Attach modal trigger to cards and buttons
   document.querySelectorAll('[data-modal]').forEach(el => {
     el.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -207,17 +208,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
 
-  // Close modal when clicking outside container
   if (detailModal) {
     detailModal.addEventListener('click', (e) => {
       if (e.target === detailModal) closeModal();
     });
   }
 
-  // Close on Escape key
+  // 6. Resume Modal Handlers
+  function openResumeModal() {
+    resumeModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeResumeModal() {
+    resumeModal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+
+  if (heroResumeBtn) heroResumeBtn.addEventListener('click', openResumeModal);
+  if (navResumeBtn) navResumeBtn.addEventListener('click', openResumeModal);
+  if (contactResumeBtn) contactResumeBtn.addEventListener('click', openResumeModal);
+  if (resumeCloseBtn) resumeCloseBtn.addEventListener('click', closeResumeModal);
+
+  if (resumeModal) {
+    resumeModal.addEventListener('click', (e) => {
+      if (e.target === resumeModal) closeResumeModal();
+    });
+  }
+
+  // Global Escape Key Listener
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !detailModal.classList.contains('hidden')) {
-      closeModal();
+    if (e.key === 'Escape') {
+      if (!detailModal.classList.contains('hidden')) closeModal();
+      if (!resumeModal.classList.contains('hidden')) closeResumeModal();
     }
   });
 });

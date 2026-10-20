@@ -18,7 +18,7 @@
     <div class="splash-content">
       <div class="splash-brand">SAIFLIX</div>
       <h1 class="splash-heading">Who's watching?</h1>
-      <p class="splash-subheading">Select your profile to explore experience, hardware &amp; AI product builds, and technical skills.</p>
+      <p class="splash-subheading">Select your profile to explore work experience, product builds, and technical skills.</p>
 
       <div class="profile-cards">
         <div class="profile-card active-profile" data-profile="recruiter">
@@ -26,7 +26,7 @@
             <span class="avatar-icon">&#128188;</span>
           </div>
           <span class="profile-name">Recruiter</span>
-          <span class="profile-pill">Recommended</span>
+          <span class="profile-pill">Profile</span>
         </div>
 
         <div class="profile-card" data-profile="hiring-manager">
@@ -51,7 +51,7 @@
       </div>
 
       <div class="splash-footer-note">
-        Interactive portfolio for Sairaj Pulaparthi &bull; Product Manager Intern at OPSWAT
+        Portfolio of Sairaj Pulaparthi &bull; Product Manager Intern at OPSWAT
       </div>
     </div>
   </div>
@@ -65,16 +65,16 @@
         <div class="netflix-logo" id="brandLogo">SAIFLIX</div>
         <nav class="nav-links">
           <a href="#featured" class="active">Home</a>
-          <a href="#experience">Work Experience</a>
-          <a href="#projects">Original Builds</a>
-          <a href="#skills">Skills &amp; Tech</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
           <a href="#education">Education</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
 
       <div class="nav-right">
-        <a href="mailto:sairajpulaparthi@ufl.edu" class="nav-action-link">Get in Touch</a>
+        <button id="navResumeBtn" class="nav-action-link">Resume</button>
         <div class="user-profile-menu" id="profileToggle" title="Click to switch profile">
           <div class="mini-avatar recruiter-avatar">&#128188;</div>
           <span class="mini-profile-name">Recruiter</span>
@@ -89,24 +89,20 @@
         <div class="billboard-vignette"></div>
       </div>
       <div class="billboard-content">
-        <div class="match-badge">
-          <span class="match-score">99% Match</span>
-          <span class="badge-tag">#1 in Product Management Today</span>
-        </div>
         <h1 class="billboard-title">SAIRAJ PULAPARTHI</h1>
         <div class="billboard-meta">
-          <span class="meta-tag rating">TOP TALENT</span>
+          <span class="meta-tag rating">Product Management</span>
           <span class="meta-tag year">2026</span>
-          <span class="meta-tag quality">ULTRA PM</span>
+          <span class="meta-tag quality">Cybersecurity &amp; AI</span>
           <span class="meta-tag degree">UF Warrington B.S.B.A.</span>
         </div>
         <p class="billboard-synopsis">
           Product Manager Intern at <a href="https://www.opswat.com/" target="_blank" rel="noopener">OPSWAT</a> leading zero-to-one cybersecurity workstation scanners and next-generation Media Firewall hardware architecture. Experienced in B2B product requirements, custom JQL deal-blocker pipelines, and AI compliance automation.
         </p>
         <div class="billboard-actions">
-          <a href="mailto:sairajpulaparthi@ufl.edu" class="btn btn-primary-play">
-            <span class="icon">&#9654;</span> Connect / Hire
-          </a>
+          <button id="heroResumeBtn" class="btn btn-primary-play">
+            <span class="icon">&#9654;</span> Resume
+          </button>
           <button class="btn btn-secondary-info" data-modal="opswat-pm2">
             <span class="icon">&#8505;</span> More Info
           </button>
@@ -125,14 +121,14 @@
 
       <!-- Row 1: Work Experience -->
       <section id="experience" class="row-section">
-        <h2 class="row-title">Top Binge-Worthy Roles <span class="row-subtitle">&mdash; Work Experience</span></h2>
+        <h2 class="row-title">Work Experience</h2>
         <div class="row-scroll-container">
           <div class="cards-track">
 
             <!-- Card 1: OPSWAT PM II -->
             <div class="media-card" data-modal="opswat-pm2">
               <div class="card-thumb thumb-opswat2">
-                <div class="thumb-badge">CURRENT SEASON</div>
+                <div class="thumb-badge">CURRENT ROLE</div>
                 <div class="thumb-content">
                   <div class="thumb-company">OPSWAT</div>
                   <div class="thumb-title">Product Manager Intern II</div>
@@ -141,12 +137,11 @@
               </div>
               <div class="card-body">
                 <div class="card-meta-line">
-                  <span class="card-match">99% Match</span>
                   <span class="card-pill">Zero-to-One</span>
-                  <span class="card-pill">Hardware</span>
+                  <span class="card-pill">Hardware Architecture</span>
                 </div>
                 <div class="card-quick-desc">
-                  MetaDefender Media Firewall redesign &bull; Workstation scanner OTG delivery &bull; Radxa &amp; BCM hardware architecture.
+                  MetaDefender Media Firewall redesign &bull; Workstation scanner OTG delivery &bull; Radxa &amp; BCM board revisions.
                 </div>
               </div>
             </div>
@@ -154,7 +149,7 @@
             <!-- Card 2: OPSWAT PM I -->
             <div class="media-card" data-modal="opswat-pm1">
               <div class="card-thumb thumb-opswat1">
-                <div class="thumb-badge">SEASON 1</div>
+                <div class="thumb-badge">PREVIOUS INTERNSHIP</div>
                 <div class="thumb-content">
                   <div class="thumb-company">OPSWAT</div>
                   <div class="thumb-title">Product Manager Intern I</div>
@@ -163,12 +158,11 @@
               </div>
               <div class="card-body">
                 <div class="card-meta-line">
-                  <span class="card-match">98% Match</span>
-                  <span class="card-pill">1000+ Tickets</span>
-                  <span class="card-pill">B2B Specs</span>
+                  <span class="card-pill">1,000+ Tickets</span>
+                  <span class="card-pill">B2B Specifications</span>
                 </div>
                 <div class="card-quick-desc">
-                  JQL deal-blocker dashboard &bull; PCB prototype soldering &bull; Power BI automated executive roadmap reporting.
+                  JQL deal-blocker dashboard &bull; PCB prototype testing &bull; Power BI automated executive roadmap reporting.
                 </div>
               </div>
             </div>
@@ -176,7 +170,7 @@
             <!-- Card 3: MedLaunch Concepts -->
             <div class="media-card" data-modal="medlaunch">
               <div class="card-thumb thumb-medlaunch">
-                <div class="thumb-badge">HEALTHCARE TECH</div>
+                <div class="thumb-badge">HEALTHCARE PLATFORM</div>
                 <div class="thumb-content">
                   <div class="thumb-company">MedLaunch Concepts</div>
                   <div class="thumb-title">Product Manager Intern</div>
@@ -185,12 +179,11 @@
               </div>
               <div class="card-body">
                 <div class="card-meta-line">
-                  <span class="card-match">97% Match</span>
                   <span class="card-pill">500+ Users</span>
-                  <span class="card-pill">95% QA</span>
+                  <span class="card-pill">95% Compliance</span>
                 </div>
                 <div class="card-quick-desc">
-                  Hospital accreditation portal &bull; Led QA team of 4&ndash;6 &bull; Coordinated cybersecurity compliance for live demos.
+                  Hospital accreditation portal &bull; QA team leadership &bull; Coordinated cybersecurity compliance for live demos.
                 </div>
               </div>
             </div>
@@ -198,7 +191,7 @@
             <!-- Card 4: UF Research IT -->
             <div class="media-card" data-modal="uf-it">
               <div class="card-thumb thumb-uf">
-                <div class="thumb-badge">ENTERPRISE IT</div>
+                <div class="thumb-badge">IT INFRASTRUCTURE</div>
                 <div class="thumb-content">
                   <div class="thumb-company">UF Research Info Services</div>
                   <div class="thumb-title">Information Technology Intern</div>
@@ -207,12 +200,11 @@
               </div>
               <div class="card-body">
                 <div class="card-meta-line">
-                  <span class="card-match">96% Match</span>
                   <span class="card-pill">200+ Faculty</span>
                   <span class="card-pill">Salesforce</span>
                 </div>
                 <div class="card-quick-desc">
-                  Diagnosed network/hardware issues &bull; Salesforce ticket liaison &bull; Secure computer imaging &amp; provisioning.
+                  Diagnosed hardware and network issues &bull; Salesforce ticket liaison &bull; Secure computer imaging &amp; provisioning.
                 </div>
               </div>
             </div>
@@ -223,7 +215,7 @@
 
       <!-- Row 2: Featured Projects -->
       <section id="projects" class="row-section">
-        <h2 class="row-title">Original Series <span class="row-subtitle">&mdash; Featured Builds</span></h2>
+        <h2 class="row-title">Featured Projects</h2>
         <div class="row-scroll-container">
           <div class="cards-track">
 
@@ -232,15 +224,15 @@
               <div class="card-thumb thumb-proj1">
                 <div class="thumb-badge">AI &bull; LLM &bull; PRD</div>
                 <div class="thumb-content">
-                  <div class="thumb-company">Original Build</div>
+                  <div class="thumb-company">Technical Project</div>
                   <div class="thumb-title">Security &amp; Compliance Gap Analyzer</div>
                   <div class="thumb-date">Python &bull; Streamlit &bull; GitHub</div>
                 </div>
               </div>
               <div class="card-body">
                 <div class="card-meta-line">
-                  <span class="card-match">99% Match</span>
                   <span class="card-pill">AI Automation</span>
+                  <span class="card-pill">PRD Authoring</span>
                 </div>
                 <div class="card-quick-desc">
                   AI-driven workflow ingesting operational policies to flag missing controls. Includes PRD, trade-off analysis &amp; metrics.
@@ -253,15 +245,15 @@
               <div class="card-thumb thumb-proj2">
                 <div class="thumb-badge">DATA &bull; PERIPHERALS</div>
                 <div class="thumb-content">
-                  <div class="thumb-company">Original Build</div>
+                  <div class="thumb-company">Technical Project</div>
                   <div class="thumb-title">Hardware Vulnerability Triage Dashboard</div>
                   <div class="thumb-date">SQL &bull; Pandas &bull; Python</div>
                 </div>
               </div>
               <div class="card-body">
                 <div class="card-meta-line">
-                  <span class="card-match">98% Match</span>
                   <span class="card-pill">10,000+ Logs</span>
+                  <span class="card-pill">Data Pipeline</span>
                 </div>
                 <div class="card-quick-desc">
                   Pipeline analyzing 10k+ peripheral connection logs to visualize threat vectors while balancing OTG security with productivity.
@@ -275,7 +267,7 @@
 
       <!-- Row 3: Skills & Tech -->
       <section id="skills" class="row-section">
-        <h2 class="row-title">Trending in Technical Stack <span class="row-subtitle">&mdash; Tools &amp; Methods</span></h2>
+        <h2 class="row-title">Skills &amp; Technologies</h2>
         <div class="skills-grid-netflix">
           <div class="skill-category-card">
             <div class="category-icon">&#128202;</div>
@@ -321,7 +313,7 @@
 
       <!-- Row 4: Education & Honors -->
       <section id="education" class="row-section">
-        <h2 class="row-title">Critically Acclaimed <span class="row-subtitle">&mdash; Education &amp; Honors</span></h2>
+        <h2 class="row-title">Education</h2>
         <div class="edu-netflix-card">
           <div class="edu-badge-icon">&#127891;</div>
           <div class="edu-content">
@@ -339,20 +331,23 @@
 
       <!-- Row 5: Contact & Socials -->
       <section id="contact" class="row-section contact-row">
-        <h2 class="row-title">Ready to Add Sairaj to Your Team?</h2>
-        <p class="contact-sub">Available for Product Management and Technical Program Management opportunities.</p>
+        <h2 class="row-title">Get in Touch</h2>
+        <p class="contact-sub">Feel free to reach out regarding product management and information systems opportunities.</p>
         <div class="contact-btn-group">
-          <a href="mailto:sairajpulaparthi@ufl.edu" class="btn btn-primary-play">
-            <span class="icon">&#9993;</span> Email Sairaj
+          <button class="btn btn-primary-play" id="contactResumeBtn">
+            <span class="icon">&#128196;</span> View Resume
+          </button>
+          <a href="mailto:sairajpulaparthi@ufl.edu" class="btn btn-secondary-info">
+            <span class="icon">&#9993;</span> sairajpulaparthi@ufl.edu
           </a>
           <a href="tel:+18136199614" class="btn btn-secondary-info">
             <span class="icon">&#9742;</span> (813) 619-9614
           </a>
           <a href="https://www.linkedin.com/in/sairaj-pulaparthi/" target="_blank" rel="noopener" class="btn btn-secondary-info">
-            LinkedIn Profile &nearr;
+            LinkedIn &nearr;
           </a>
           <a href="https://github.com/SairajPulaparthi1" target="_blank" rel="noopener" class="btn btn-secondary-info">
-            GitHub Repositories &nearr;
+            GitHub &nearr;
           </a>
         </div>
       </section>
@@ -362,7 +357,7 @@
     <!-- Footer -->
     <footer class="netflix-footer">
       <div class="footer-meta">
-        <p>Questions? Contact <a href="mailto:sairajpulaparthi@ufl.edu">sairajpulaparthi@ufl.edu</a></p>
+        <p>Contact: <a href="mailto:sairajpulaparthi@ufl.edu">sairajpulaparthi@ufl.edu</a></p>
         <div class="footer-links">
           <button id="switchProfileBtn" class="footer-profile-switch">Switch Profile</button>
           <span>&bull;</span>
@@ -374,17 +369,16 @@
     </footer>
   </div>
 
-  <!-- INTERACTIVE MODAL DIALOG (Netflix Detail Pop-Up) -->
+  <!-- INTERACTIVE MODAL DIALOG (Card Details) -->
   <div id="detailModal" class="modal-overlay hidden" aria-hidden="true" role="dialog">
     <div class="modal-container">
       <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close details">&times;</button>
       <div class="modal-banner" id="modalBanner">
         <div class="modal-banner-gradient"></div>
         <div class="modal-banner-content">
-          <div class="modal-badge" id="modalBadge">CASE STUDY</div>
+          <div class="modal-badge" id="modalBadge">ROLE OVERVIEW</div>
           <h2 class="modal-title" id="modalTitle">Role Title</h2>
           <div class="modal-meta-line" id="modalMeta">
-            <span class="match-score">99% Match</span>
             <span id="modalDate">Dates</span>
             <span class="badge-tag" id="modalTag">Product Management</span>
           </div>
@@ -393,13 +387,34 @@
       <div class="modal-body-content">
         <div class="modal-company-line" id="modalCompany">Company Name &bull; Location</div>
         <div class="modal-bullet-section">
-          <h3>Key Highlights &amp; Accomplishments</h3>
+          <h3>Key Responsibilities &amp; Highlights</h3>
           <ul id="modalBullets" class="modal-bullets"></ul>
         </div>
         <div class="modal-tags-section">
-          <h3>Competencies &amp; Technologies</h3>
+          <h3>Technologies &amp; Competencies</h3>
           <div id="modalPills" class="pills-container"></div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESUME VIEWER MODAL (Opens right on the page) -->
+  <div id="resumeModal" class="modal-overlay hidden" aria-hidden="true" role="dialog">
+    <div class="resume-modal-container">
+      <div class="resume-modal-header">
+        <div class="resume-modal-title">Sairaj Pulaparthi &mdash; Resume</div>
+        <div class="resume-modal-actions">
+          <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-secondary-info" style="padding: 0.35rem 0.85rem; font-size: 0.82rem;">
+            Open in New Tab &nearr;
+          </a>
+          <a href="resume.pdf" download="Sairaj_Pulaparthi_Resume.pdf" class="btn btn-primary-play" style="padding: 0.35rem 0.85rem; font-size: 0.82rem;">
+            Download PDF
+          </a>
+          <button class="resume-close-btn" id="resumeCloseBtn" aria-label="Close resume">&times;</button>
+        </div>
+      </div>
+      <div class="resume-embed-wrapper">
+        <iframe src="resume.pdf" title="Sairaj Pulaparthi Resume PDF" class="resume-iframe"></iframe>
       </div>
     </div>
   </div>

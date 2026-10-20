@@ -175,10 +175,10 @@ a {
 .profile-pill {
   position: absolute;
   top: -8px;
-  background: var(--netflix-red);
+  background: rgba(255, 255, 255, 0.2);
   color: #fff;
   font-size: 0.68rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
@@ -298,16 +298,18 @@ a {
 
 .nav-action-link {
   font-size: 0.88rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-white);
-  padding: 0.35rem 0.85rem;
+  padding: 0.4rem 1rem;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--netflix-red);
+  border: none;
+  cursor: pointer;
   transition: background 0.2s ease;
 }
 
 .nav-action-link:hover {
-  background: rgba(255, 255, 255, 0.28);
+  background: var(--netflix-red-hover);
 }
 
 .user-profile-menu {
@@ -343,8 +345,8 @@ a {
 
 .billboard {
   position: relative;
-  height: 80vh;
-  min-height: 540px;
+  height: 75vh;
+  min-height: 500px;
   display: flex;
   align-items: center;
   padding: 0 3.5rem;
@@ -355,8 +357,8 @@ a {
   position: absolute;
   inset: 0;
   background-image: 
-    radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.18) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 80%, rgba(229, 9, 20, 0.15) 0%, transparent 60%);
+    radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(229, 9, 20, 0.12) 0%, transparent 60%);
 }
 
 .billboard-vignette {
@@ -371,31 +373,6 @@ a {
   z-index: 10;
   max-width: 680px;
   margin-top: 2rem;
-}
-
-.match-badge {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.match-score {
-  color: var(--green-match);
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-}
-
-.badge-tag {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #fff;
-  background: rgba(229, 9, 20, 0.85);
-  padding: 0.2rem 0.6rem;
-  border-radius: 3px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .billboard-title {
@@ -419,22 +396,20 @@ a {
 .meta-tag {
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.15rem 0.5rem;
-  border-radius: 2px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0.2rem 0.55rem;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: var(--text-gray);
 }
 
 .meta-tag.rating {
   border-color: #ffffff;
   color: #ffffff;
-  font-weight: 700;
 }
 
 .meta-tag.quality {
-  border-color: var(--netflix-red);
-  color: var(--netflix-red);
-  font-weight: 700;
+  border-color: rgba(229, 9, 20, 0.6);
+  color: #ff6b6b;
 }
 
 .billboard-synopsis {
@@ -476,7 +451,7 @@ a {
 }
 
 .btn-primary-play:hover {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .btn-secondary-info {
@@ -514,15 +489,6 @@ a {
   font-weight: 700;
   letter-spacing: -0.01em;
   color: #e5e5e5;
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-}
-
-.row-subtitle {
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: var(--text-dim);
 }
 
 .row-scroll-container {
@@ -651,12 +617,6 @@ a {
   gap: 0.4rem;
 }
 
-.card-match {
-  color: var(--green-match);
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
 .card-pill {
   font-size: 0.72rem;
   padding: 0.15rem 0.45rem;
@@ -753,7 +713,7 @@ a {
 }
 
 .edu-highlight {
-  color: var(--green-match);
+  color: #ffffff;
   font-weight: 700;
 }
 
@@ -821,14 +781,14 @@ a {
 }
 
 /* ==========================================================================
-   INTERACTIVE MODAL POPUP (NETFLIX DETAILS)
+   INTERACTIVE DETAIL MODAL
    ========================================================================== */
 
 .modal-overlay {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.82);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
@@ -861,11 +821,8 @@ a {
   }
 }
 
-.modal-close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 20;
+.modal-close-btn,
+.resume-close-btn {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -880,13 +837,21 @@ a {
   transition: background 0.2s ease;
 }
 
-.modal-close-btn:hover {
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 20;
+}
+
+.modal-close-btn:hover,
+.resume-close-btn:hover {
   background: #fff;
   color: #000;
 }
 
 .modal-banner {
-  height: 180px;
+  height: 170px;
   background: linear-gradient(135deg, #1e1b4b 0%, #1e3a8a 60%, #0f172a 100%);
   position: relative;
   display: flex;
@@ -994,6 +959,60 @@ a {
   color: var(--text-gray);
 }
 
+/* ==========================================================================
+   RESUME VIEWER MODAL
+   ========================================================================== */
+
+.resume-modal-container {
+  width: 100%;
+  max-width: 920px;
+  height: 88vh;
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-cinema);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  animation: modalPop 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.resume-modal-header {
+  padding: 0.9rem 1.5rem;
+  background-color: #111111;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.resume-modal-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.resume-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.resume-embed-wrapper {
+  flex-grow: 1;
+  width: 100%;
+  height: calc(100% - 56px);
+  background-color: #2b2b2b;
+}
+
+.resume-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .netflix-nav {
@@ -1011,5 +1030,8 @@ a {
   .rows-container {
     padding: 0 1.5rem 3rem;
     margin-top: 0;
+  }
+  .resume-modal-container {
+    height: 94vh;
   }
 }
