@@ -90,8 +90,11 @@ const modalData = {
       'Designed and built Docket, a local-first personal ticket board combining Jira\'s structured tracking (Backlog → To Do → In Progress → Blocked → Done) with a simple, friction-free interface.',
       'Engineered tickets that hold the full story: Markdown descriptions, checklists, timestamped activity notes, and drag-and-drop file/screenshot attachments.',
       'Implemented full-text ⌘K search that reads inside attached logs, Markdown notes, code snippets, PDFs, and Word documents.',
-      'Architected for privacy and local control: every ticket is stored as plain JSON on disk with zero cloud tracking, accompanied by a companion terminal CLI.',
-      'Try the live demo at sairajpulaparthi1.github.io/docket-demo/ or inspect the source on GitHub (github.com/SairajPulaparthi1/docket-demo).'
+      'Architected for privacy and local control: every ticket is stored as plain JSON on disk with zero cloud tracking, accompanied by a companion terminal CLI.'
+    ],
+    links: [
+      { label: 'Try the live demo', url: 'https://sairajpulaparthi1.github.io/docket-demo/', primary: true },
+      { label: 'View on GitHub', url: 'https://github.com/SairajPulaparthi1/docket-demo' }
     ],
     pills: ['React', 'TypeScript', 'Local-First', 'Kanban Board', '⌘K Search', 'Markdown', 'CLI']
   },
@@ -105,8 +108,11 @@ const modalData = {
       'Conceived and engineered Brightside PM Sim, a browser game that teaches product management by placing players in real-world PM dilemmas at a scheduling software company.',
       'Simulated multi-week decision arcs: diagnosing customer churn root causes (Week 1), running A/B tests and surviving 2 a.m. server outages (Week 2), and setting OKRs, feature discovery, PRD spec authoring, and enterprise deal negotiation (Week 3).',
       'Engineered dynamic consequence loops where user trade-offs directly impact engineering capacity, customer retention, and business KPIs.',
-      'Built a zero-install experience with local browser autosave and direct multi-week chapter selection.',
-      'Play the game live at sairajpulaparthi1.github.io/brightside-pm-sim/ or view the repository on GitHub (github.com/SairajPulaparthi1/brightside-pm-sim).'
+      'Built a zero-install experience with local browser autosave and direct multi-week chapter selection.'
+    ],
+    links: [
+      { label: 'Play the game', url: 'https://sairajpulaparthi1.github.io/brightside-pm-sim/', primary: true },
+      { label: 'View on GitHub', url: 'https://github.com/SairajPulaparthi1/brightside-pm-sim' }
     ],
     pills: ['Product Strategy', 'Discovery & PRDs', 'A/B Testing', 'Churn Analysis', 'Game Design', 'Interactive UI']
   }
@@ -132,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalTag = document.getElementById('modalTag');
   const modalBullets = document.getElementById('modalBullets');
   const modalPills = document.getElementById('modalPills');
+  const modalLinks = document.getElementById('modalLinks');
 
   // Resume Modal Elements
   const resumeModal = document.getElementById('resumeModal');
@@ -218,6 +225,20 @@ document.addEventListener('DOMContentLoaded', () => {
       span.textContent = p;
       modalPills.appendChild(span);
     });
+
+    if (modalLinks) {
+      modalLinks.innerHTML = '';
+      (data.links || []).forEach(l => {
+        const a = document.createElement('a');
+        a.href = l.url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.className = 'btn ' + (l.primary ? 'btn-primary-play' : 'btn-secondary-info');
+        a.textContent = l.label;
+        modalLinks.appendChild(a);
+      });
+      modalLinks.hidden = !(data.links && data.links.length);
+    }
 
     detailModal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';

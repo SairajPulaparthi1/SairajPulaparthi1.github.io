@@ -1,5 +1,7 @@
 # Sairaj Pulaparthi — Product Management & Information Systems Portfolio
 
+**[▶ Open the portfolio](https://sairajpulaparthi1.github.io/)**
+
 Personal portfolio website showcasing Product Management experience, hardware/cybersecurity initiatives, and AI/data engineering projects.
 
 ## Contents

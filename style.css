@@ -929,6 +929,21 @@ a {
   letter-spacing: 0.05em;
 }
 
+.modal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.25rem 0 1.5rem;
+}
+
+.modal-links[hidden] {
+  display: none;
+}
+
+.modal-links .btn {
+  text-decoration: none;
+}
+
 .modal-bullets {
   list-style: none;
   display: flex;
