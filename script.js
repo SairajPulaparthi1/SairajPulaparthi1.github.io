@@ -83,9 +83,9 @@ const modalData = {
   'proj-docket': {
     badge: 'LOCAL-FIRST TOOL • PRODUCTIVITY',
     title: 'Docket — Local-First Ticket Board',
-    company: 'Personal Build (React, TypeScript, Local JSON, CLI Tool)',
+    company: 'Personal Build (JavaScript, Node.js, Local JSON, CLI Tool)',
     tag: 'Jira Alternative / Local-First',
-    date: 'React • TypeScript • CLI',
+    date: 'JavaScript • Node.js • CLI',
     bullets: [
       'Designed and built Docket, a local-first personal ticket board combining Jira\'s structured tracking (Backlog → To Do → In Progress → Blocked → Done) with a simple, friction-free interface.',
       'Engineered tickets that hold the full story: Markdown descriptions, checklists, timestamped activity notes, and drag-and-drop file/screenshot attachments.',
@@ -96,7 +96,7 @@ const modalData = {
       { label: 'Try the live demo', url: 'https://sairajpulaparthi1.github.io/docket-demo/', primary: true },
       { label: 'View on GitHub', url: 'https://github.com/SairajPulaparthi1/docket-demo' }
     ],
-    pills: ['React', 'TypeScript', 'Local-First', 'Kanban Board', '⌘K Search', 'Markdown', 'CLI']
+    pills: ['JavaScript', 'Node.js', 'Local-First', 'Kanban Board', '⌘K Search', 'Markdown', 'CLI']
   },
   'proj-brightside': {
     badge: 'PRODUCT MANAGEMENT SIMULATION',
