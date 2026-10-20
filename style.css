@@ -1036,6 +1036,24 @@ a {
   border: none;
 }
 
+/* Keyboard focus */
+.media-card:focus-visible,
+.profile-card:focus-visible,
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.nav-action-link:focus-visible,
+.user-profile-menu:focus-visible,
+.netflix-logo:focus-visible,
+.modal-close-btn:focus-visible,
+.resume-close-btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .netflix-nav {

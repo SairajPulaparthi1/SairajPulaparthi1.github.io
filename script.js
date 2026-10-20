@@ -50,7 +50,7 @@ const modalData = {
     tag: 'Enterprise Support',
     date: 'Aug 2023 – Present',
     bullets: [
-      'Provided technical support to over 200+ faculty members by diagnosing and resolving hardware, software, and network issues.',
+      'Provided technical support to 200+ faculty members by diagnosing and resolving hardware, software, and network issues.',
       'Utilized Salesforce to manage IT support tickets, serving as the primary liaison between end users and technical teams to resolve requests efficiently.',
       'Wiped, reimaged, and provisioned computers for faculty and staff, ensuring configurations complied with university data security standards.'
     ],
@@ -81,9 +81,9 @@ const modalData = {
     pills: ['Python', 'SQL', 'Pandas', 'Matplotlib / Seaborn', 'Perimeter Security', 'Statistical Guardrails']
   },
   'proj-docket': {
-    badge: 'LOCAL-FIRST TOOL • PRODUCTIVITY',
+    badge: 'TECHNICAL BUILD',
     title: 'Docket — Local-First Ticket Board',
-    company: 'Personal Build (JavaScript, Node.js, Local JSON, CLI Tool)',
+    company: 'Technical Project (JavaScript, Node.js, Local JSON, CLI Tool)',
     tag: 'Jira Alternative / Local-First',
     date: 'JavaScript • Node.js • CLI',
     bullets: [
@@ -99,22 +99,22 @@ const modalData = {
     pills: ['JavaScript', 'Node.js', 'Local-First', 'Kanban Board', '⌘K Search', 'Markdown', 'CLI']
   },
   'proj-brightside': {
-    badge: 'PRODUCT MANAGEMENT SIMULATION',
+    badge: 'TECHNICAL BUILD',
     title: 'Brightside PM Sim — Interactive Game',
-    company: 'Interactive EdTech Product (Browser Game, Zero Install)',
+    company: 'Technical Project (JavaScript, HTML Canvas, Browser Game)',
     tag: 'PM Simulation / Education',
-    date: 'Interactive Browser Game',
+    date: 'JavaScript • HTML Canvas • Zero Install',
     bullets: [
       'Conceived and engineered Brightside PM Sim, a browser game that teaches product management by placing players in real-world PM dilemmas at a scheduling software company.',
-      'Simulated multi-week decision arcs: diagnosing customer churn root causes (Week 1), running A/B tests and surviving 2 a.m. server outages (Week 2), and setting OKRs, feature discovery, PRD spec authoring, and enterprise deal negotiation (Week 3).',
+      'Designed three playable weeks: diagnosing a churn crisis and writing the PRD (Week 1), running an A/B test, surviving a 2 a.m. outage and setting prices (Week 2), and setting OKRs, running discovery, writing user stories and negotiating an enterprise deal (Week 3).',
       'Engineered dynamic consequence loops where user trade-offs directly impact engineering capacity, customer retention, and business KPIs.',
-      'Built a zero-install experience with local browser autosave and direct multi-week chapter selection.'
+      'Built a zero-install, no-account experience: a walkable office, a live game clock, autosave in the browser, and a home page to jump to any week.'
     ],
     links: [
       { label: 'Play the game', url: 'https://sairajpulaparthi1.github.io/brightside-pm-sim/', primary: true },
       { label: 'View on GitHub', url: 'https://github.com/SairajPulaparthi1/brightside-pm-sim' }
     ],
-    pills: ['Product Strategy', 'Discovery & PRDs', 'A/B Testing', 'Churn Analysis', 'Game Design', 'Interactive UI']
+    pills: ['JavaScript', 'HTML Canvas', 'Product Strategy', 'Discovery & PRDs', 'A/B Testing', 'Game Design']
   }
 };
 
@@ -147,20 +147,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const navResumeBtn = document.getElementById('navResumeBtn');
   const contactResumeBtn = document.getElementById('contactResumeBtn');
 
+  // Make clickable cards reachable and usable from the keyboard
+  document.querySelectorAll('.profile-card, .media-card[data-modal], #profileToggle, #brandLogo').forEach(el => {
+    el.setAttribute('tabindex', '0');
+    el.setAttribute('role', 'button');
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+  });
+
   // 1. Profile selection interaction
   profileCards.forEach(card => {
     card.addEventListener('click', () => {
       profileCards.forEach(c => c.classList.remove('active-profile'));
       card.classList.add('active-profile');
       document.querySelector('.mini-profile-name').textContent = card.querySelector('.profile-name').textContent;
-      triggerEnter();
+      triggerEnter(card.dataset.profile);
     });
   });
 
   // 2. Enter Portfolio Button
-  function triggerEnter() {
+  function triggerEnter(profile) {
+    if (typeof profile !== 'string') profile = (document.querySelector('.profile-card.active-profile') || {}).dataset?.profile || 'recruiter';
     frontSplash.classList.add('fade-out');
-    window.location.hash = '#profile/recruiter';
+    window.location.hash = '#profile/' + profile;
     setTimeout(() => {
       frontSplash.classList.add('hidden');
       mainDashboard.classList.remove('hidden');
@@ -174,6 +184,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Check URL hash if user opens directly with #profile/recruiter
   if (window.location.hash.includes('profile')) {
+    const fromHash = window.location.hash.split('/')[1];
+    const card = document.querySelector(`.profile-card[data-profile="${fromHash}"]`);
+    if (card) {
+      profileCards.forEach(c => c.classList.remove('active-profile'));
+      card.classList.add('active-profile');
+      document.querySelector('.mini-profile-name').textContent = card.querySelector('.profile-name').textContent;
+    }
     frontSplash.classList.add('hidden');
     mainDashboard.classList.remove('hidden');
   }
@@ -200,7 +217,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Highlight the nav link for the section in view
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sections = [...navLinks].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  function updateActiveNav() {
+    let current = sections[0];
+    for (const s of sections) if (s.getBoundingClientRect().top <= window.innerHeight * 0.4) current = s;
+    navLinks.forEach(a => a.classList.toggle('active', !!current && a.getAttribute('href') === '#' + current.id));
+  }
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+
   // 5. Open Card Details Modal
+  let lastFocus = null;
   function openModal(key) {
     const data = modalData[key];
     if (!data) return;
@@ -240,13 +268,18 @@ document.addEventListener('DOMContentLoaded', () => {
       modalLinks.hidden = !(data.links && data.links.length);
     }
 
+    lastFocus = document.activeElement;
     detailModal.classList.remove('hidden');
+    detailModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    if (modalCloseBtn) modalCloseBtn.focus();
   }
 
   function closeModal() {
     detailModal.classList.add('hidden');
+    detailModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = 'auto';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
 
   document.querySelectorAll('[data-modal]').forEach(el => {
@@ -267,13 +300,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 6. Resume Modal Handlers
   function openResumeModal() {
+    lastFocus = document.activeElement;
     resumeModal.classList.remove('hidden');
+    resumeModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    if (resumeCloseBtn) resumeCloseBtn.focus();
   }
 
   function closeResumeModal() {
     resumeModal.classList.add('hidden');
+    resumeModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = 'auto';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
 
   if (heroResumeBtn) heroResumeBtn.addEventListener('click', openResumeModal);

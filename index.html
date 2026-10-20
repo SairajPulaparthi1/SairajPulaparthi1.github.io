@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sairaj Pulaparthi | Recruiter Profile</title>
+  <title>Sairaj Pulaparthi | Product Management Portfolio</title>
   <meta name="description" content="Streaming-inspired portfolio of Sairaj Pulaparthi. Product Manager Intern at OPSWAT, Information Systems at University of Florida Warrington College of Business." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sairaj Pulaparthi | Product Management Portfolio" />
+  <meta property="og:description" content="Product Manager Intern at OPSWAT and Information Systems student at the University of Florida. Work experience, product builds and a playable PM simulation." />
+  <meta property="og:url" content="https://sairajpulaparthi1.github.io/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Ctext x='32' y='47' font-family='Arial Black,Arial,sans-serif' font-size='42' font-weight='900' text-anchor='middle' fill='%23E50914'%3ES%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -266,7 +272,7 @@
               <div class="card-thumb thumb-docket">
                 <div class="thumb-badge">LOCAL-FIRST &bull; KANBAN</div>
                 <div class="thumb-content">
-                  <div class="thumb-company">GitHub &bull; SairajPulaparthi1</div>
+                  <div class="thumb-company">Technical Project</div>
                   <div class="thumb-title">Docket &mdash; Local Ticket Board</div>
                   <div class="thumb-date">JavaScript &bull; Node.js &bull; CLI</div>
                 </div>
@@ -285,11 +291,11 @@
             <!-- Project 4: Brightside PM Sim -->
             <div class="media-card" data-modal="proj-brightside">
               <div class="card-thumb thumb-brightside">
-                <div class="thumb-badge">PM SIMULATION &bull; GAME</div>
+                <div class="thumb-badge">GAME &bull; EDTECH &bull; PM</div>
                 <div class="thumb-content">
-                  <div class="thumb-company">GitHub &bull; SairajPulaparthi1</div>
+                  <div class="thumb-company">Technical Project</div>
                   <div class="thumb-title">Brightside PM Sim</div>
-                  <div class="thumb-date">Browser Game &bull; Zero Install</div>
+                  <div class="thumb-date">JavaScript &bull; HTML Canvas &bull; Browser</div>
                 </div>
               </div>
               <div class="card-body">
@@ -298,7 +304,7 @@
                   <span class="card-pill">Discovery &amp; PRDs</span>
                 </div>
                 <div class="card-quick-desc">
-                  Browser game that teaches PM by doing it. Navigate customer churn root causes, A/B testing, 2 AM outages, and quarter roadmaps.
+                  Playable browser game that teaches PM by doing it: churn investigations, A/B tests, a 2 a.m. outage, pricing and roadmaps.
                 </div>
               </div>
             </div>
@@ -329,6 +335,9 @@
             <div class="category-title">Data &amp; Development</div>
             <div class="category-tags">
               <span>Python</span>
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>HTML &amp; CSS</span>
               <span>SQL</span>
               <span>Pandas</span>
               <span>Streamlit</span>
@@ -412,7 +421,7 @@
   </div>
 
   <!-- INTERACTIVE MODAL DIALOG (Card Details) -->
-  <div id="detailModal" class="modal-overlay hidden" aria-hidden="true" role="dialog">
+  <div id="detailModal" class="modal-overlay hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-container">
       <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close details">&times;</button>
       <div class="modal-banner" id="modalBanner">
@@ -442,7 +451,7 @@
   </div>
 
   <!-- RESUME VIEWER MODAL (Opens right on the page) -->
-  <div id="resumeModal" class="modal-overlay hidden" aria-hidden="true" role="dialog">
+  <div id="resumeModal" class="modal-overlay hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Resume">
     <div class="resume-modal-container">
       <div class="resume-modal-header">
         <div class="resume-modal-title">Sairaj Pulaparthi &mdash; Resume</div>
