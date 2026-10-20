@@ -79,6 +79,36 @@ const modalData = {
       'Engineered prototype logic in Python to define guardrail metrics and apply statistical models, balancing strict OTG hardware perimeter security with user productivity.'
     ],
     pills: ['Python', 'SQL', 'Pandas', 'Matplotlib / Seaborn', 'Perimeter Security', 'Statistical Guardrails']
+  },
+  'proj-docket': {
+    badge: 'LOCAL-FIRST TOOL • PRODUCTIVITY',
+    title: 'Docket — Local-First Ticket Board',
+    company: 'Personal Build (React, TypeScript, Local JSON, CLI Tool)',
+    tag: 'Jira Alternative / Local-First',
+    date: 'React • TypeScript • CLI',
+    bullets: [
+      'Designed and built Docket, a local-first personal ticket board combining Jira\'s structured tracking (Backlog → To Do → In Progress → Blocked → Done) with a simple, friction-free interface.',
+      'Engineered tickets that hold the full story: Markdown descriptions, checklists, timestamped activity notes, and drag-and-drop file/screenshot attachments.',
+      'Implemented full-text ⌘K search that reads inside attached logs, Markdown notes, code snippets, PDFs, and Word documents.',
+      'Architected for privacy and local control: every ticket is stored as plain JSON on disk with zero cloud tracking, accompanied by a companion terminal CLI.',
+      'Try the live demo at sairajpulaparthi1.github.io/docket-demo/ or inspect the source on GitHub (github.com/SairajPulaparthi1/docket-demo).'
+    ],
+    pills: ['React', 'TypeScript', 'Local-First', 'Kanban Board', '⌘K Search', 'Markdown', 'CLI']
+  },
+  'proj-brightside': {
+    badge: 'PRODUCT MANAGEMENT SIMULATION',
+    title: 'Brightside PM Sim — Interactive Game',
+    company: 'Interactive EdTech Product (Browser Game, Zero Install)',
+    tag: 'PM Simulation / Education',
+    date: 'Interactive Browser Game',
+    bullets: [
+      'Conceived and engineered Brightside PM Sim, a browser game that teaches product management by placing players in real-world PM dilemmas at a scheduling software company.',
+      'Simulated multi-week decision arcs: diagnosing customer churn root causes (Week 1), running A/B tests and surviving 2 a.m. server outages (Week 2), and setting OKRs, feature discovery, PRD spec authoring, and enterprise deal negotiation (Week 3).',
+      'Engineered dynamic consequence loops where user trade-offs directly impact engineering capacity, customer retention, and business KPIs.',
+      'Built a zero-install experience with local browser autosave and direct multi-week chapter selection.',
+      'Play the game live at sairajpulaparthi1.github.io/brightside-pm-sim/ or view the repository on GitHub (github.com/SairajPulaparthi1/brightside-pm-sim).'
+    ],
+    pills: ['Product Strategy', 'Discovery & PRDs', 'A/B Testing', 'Churn Analysis', 'Game Design', 'Interactive UI']
   }
 };
 
