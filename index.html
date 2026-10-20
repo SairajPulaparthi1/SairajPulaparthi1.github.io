@@ -3,179 +3,407 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sairaj Pulaparthi — Product Manager</title>
-  <meta name="description" content="Personal portfolio of Sairaj Pulaparthi. Product Manager Intern at OPSWAT, Information Systems at University of Florida Warrington College of Business." />
+  <title>Sairaj Pulaparthi | Recruiter Profile</title>
+  <meta name="description" content="Streaming-inspired portfolio of Sairaj Pulaparthi. Product Manager Intern at OPSWAT, Information Systems at University of Florida Warrington College of Business." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="streaming-body">
 
-  <div class="container">
-    <header>
-      <div class="brand-title">Sairaj Pulaparthi</div>
-      <nav>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">Theme</button>
-      </nav>
-    </header>
+  <!-- FRONT PAGE / PROFILE GATEWAY -->
+  <div id="frontSplash" class="splash-screen">
+    <div class="splash-overlay"></div>
+    <div class="splash-content">
+      <div class="splash-brand">SAIFLIX</div>
+      <h1 class="splash-heading">Who's watching?</h1>
+      <p class="splash-subheading">Select your profile to explore experience, hardware &amp; AI product builds, and technical skills.</p>
 
-    <main>
-      <!-- Intro / Bio -->
-      <div class="intro">
-        <h1 class="intro-title">Product Manager &amp; Builder</h1>
-        <p class="intro-bio">
-          I'm an Information Systems student at the <a href="https://warrington.ufl.edu/" target="_blank" rel="noopener">University of Florida Warrington College of Business</a> and Product Manager Intern at <a href="https://www.opswat.com/" target="_blank" rel="noopener">OPSWAT</a>. I work across zero-to-one hardware and software initiatives, technical product requirements, and automated workflows.
-        </p>
-        <div class="social-links">
-          <a href="mailto:sairajpulaparthi@ufl.edu">Email &nearr;</a>
-          <a href="https://www.linkedin.com/in/sairaj-pulaparthi/" target="_blank" rel="noopener">LinkedIn &nearr;</a>
-          <a href="https://github.com/SairajPulaparthi1" target="_blank" rel="noopener">GitHub &nearr;</a>
-          <span>&bull;</span>
-          <span>Gainesville &amp; Tampa, FL</span>
+      <div class="profile-cards">
+        <div class="profile-card active-profile" data-profile="recruiter">
+          <div class="profile-avatar recruiter-avatar">
+            <span class="avatar-icon">&#128188;</span>
+          </div>
+          <span class="profile-name">Recruiter</span>
+          <span class="profile-pill">Recommended</span>
+        </div>
+
+        <div class="profile-card" data-profile="hiring-manager">
+          <div class="profile-avatar hm-avatar">
+            <span class="avatar-icon">&#128640;</span>
+          </div>
+          <span class="profile-name">Hiring Manager</span>
+        </div>
+
+        <div class="profile-card" data-profile="engineer">
+          <div class="profile-avatar eng-avatar">
+            <span class="avatar-icon">&#9881;</span>
+          </div>
+          <span class="profile-name">Tech &amp; Eng</span>
         </div>
       </div>
 
-      <!-- Experience -->
-      <section id="experience">
-        <div class="section-label">Work Experience</div>
-        <div class="experience-list">
+      <div class="splash-actions">
+        <button id="enterBtn" class="btn btn-enter">
+          <span class="btn-play-icon">&#9654;</span> ENTER PORTFOLIO
+        </button>
+      </div>
 
-          <div class="experience-item">
-            <div class="exp-header">
-              <div class="exp-role">Product Manager Intern II &middot; <span class="exp-company"><a href="https://www.opswat.com/products/metadefender" target="_blank" rel="noopener">OPSWAT</a></span></div>
-              <div class="exp-date">Aug 2025 &ndash; Present</div>
+      <div class="splash-footer-note">
+        Interactive portfolio for Sairaj Pulaparthi &bull; Product Manager Intern at OPSWAT
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN STREAMING DASHBOARD (Profile: Recruiter) -->
+  <div id="mainDashboard" class="streaming-dashboard hidden">
+    
+    <!-- Top Navigation Bar -->
+    <header class="netflix-nav" id="mainNav">
+      <div class="nav-left">
+        <div class="netflix-logo" id="brandLogo">SAIFLIX</div>
+        <nav class="nav-links">
+          <a href="#featured" class="active">Home</a>
+          <a href="#experience">Work Experience</a>
+          <a href="#projects">Original Builds</a>
+          <a href="#skills">Skills &amp; Tech</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <a href="mailto:sairajpulaparthi@ufl.edu" class="nav-action-link">Get in Touch</a>
+        <div class="user-profile-menu" id="profileToggle" title="Click to switch profile">
+          <div class="mini-avatar recruiter-avatar">&#128188;</div>
+          <span class="mini-profile-name">Recruiter</span>
+          <span class="caret">&#9662;</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Billboard Section -->
+    <section id="featured" class="billboard">
+      <div class="billboard-backdrop">
+        <div class="billboard-vignette"></div>
+      </div>
+      <div class="billboard-content">
+        <div class="match-badge">
+          <span class="match-score">99% Match</span>
+          <span class="badge-tag">#1 in Product Management Today</span>
+        </div>
+        <h1 class="billboard-title">SAIRAJ PULAPARTHI</h1>
+        <div class="billboard-meta">
+          <span class="meta-tag rating">TOP TALENT</span>
+          <span class="meta-tag year">2026</span>
+          <span class="meta-tag quality">ULTRA PM</span>
+          <span class="meta-tag degree">UF Warrington B.S.B.A.</span>
+        </div>
+        <p class="billboard-synopsis">
+          Product Manager Intern at <a href="https://www.opswat.com/" target="_blank" rel="noopener">OPSWAT</a> leading zero-to-one cybersecurity workstation scanners and next-generation Media Firewall hardware architecture. Experienced in B2B product requirements, custom JQL deal-blocker pipelines, and AI compliance automation.
+        </p>
+        <div class="billboard-actions">
+          <a href="mailto:sairajpulaparthi@ufl.edu" class="btn btn-primary-play">
+            <span class="icon">&#9654;</span> Connect / Hire
+          </a>
+          <button class="btn btn-secondary-info" data-modal="opswat-pm2">
+            <span class="icon">&#8505;</span> More Info
+          </button>
+          <a href="https://www.linkedin.com/in/sairaj-pulaparthi/" target="_blank" rel="noopener" class="btn btn-secondary-info">
+            LinkedIn &nearr;
+          </a>
+          <a href="https://github.com/SairajPulaparthi1" target="_blank" rel="noopener" class="btn btn-secondary-info">
+            GitHub &nearr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Rows Container -->
+    <div class="rows-container">
+
+      <!-- Row 1: Work Experience -->
+      <section id="experience" class="row-section">
+        <h2 class="row-title">Top Binge-Worthy Roles <span class="row-subtitle">&mdash; Work Experience</span></h2>
+        <div class="row-scroll-container">
+          <div class="cards-track">
+
+            <!-- Card 1: OPSWAT PM II -->
+            <div class="media-card" data-modal="opswat-pm2">
+              <div class="card-thumb thumb-opswat2">
+                <div class="thumb-badge">CURRENT SEASON</div>
+                <div class="thumb-content">
+                  <div class="thumb-company">OPSWAT</div>
+                  <div class="thumb-title">Product Manager Intern II</div>
+                  <div class="thumb-date">Aug 2025 &ndash; Present</div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta-line">
+                  <span class="card-match">99% Match</span>
+                  <span class="card-pill">Zero-to-One</span>
+                  <span class="card-pill">Hardware</span>
+                </div>
+                <div class="card-quick-desc">
+                  MetaDefender Media Firewall redesign &bull; Workstation scanner OTG delivery &bull; Radxa &amp; BCM hardware architecture.
+                </div>
+              </div>
             </div>
-            <ul class="exp-details">
-              <li>Own the end-to-end redesign of the MetaDefender Media Firewall, defining next-generation product requirements, feature specifications, and backlog tasks.</li>
-              <li>Led zero-to-one development of a personal workstation scanner that sanitizes and securely delivers files through an inline OTG connection.</li>
-              <li>Drive hardware architecture iterations from an initial Radxa Rock 5T prototype to the Media Firewall board, transitioning into an in-progress custom BCM-based revision.</li>
-            </ul>
-          </div>
 
-          <div class="experience-item">
-            <div class="exp-header">
-              <div class="exp-role">Product Manager Intern I &middot; <span class="exp-company"><a href="https://www.opswat.com/" target="_blank" rel="noopener">OPSWAT</a></span></div>
-              <div class="exp-date">May 2025 &ndash; Aug 2025</div>
+            <!-- Card 2: OPSWAT PM I -->
+            <div class="media-card" data-modal="opswat-pm1">
+              <div class="card-thumb thumb-opswat1">
+                <div class="thumb-badge">SEASON 1</div>
+                <div class="thumb-content">
+                  <div class="thumb-company">OPSWAT</div>
+                  <div class="thumb-title">Product Manager Intern I</div>
+                  <div class="thumb-date">May 2025 &ndash; Aug 2025</div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta-line">
+                  <span class="card-match">98% Match</span>
+                  <span class="card-pill">1000+ Tickets</span>
+                  <span class="card-pill">B2B Specs</span>
+                </div>
+                <div class="card-quick-desc">
+                  JQL deal-blocker dashboard &bull; PCB prototype soldering &bull; Power BI automated executive roadmap reporting.
+                </div>
+              </div>
             </div>
-            <ul class="exp-details">
-              <li>Translated B2B customer requirements into actionable product specifications across core MetaDefender offerings (Kiosk, Endpoint, Firewall, Drive), aligning cross-functional teams on roadmap delivery.</li>
-              <li>Partnered with hardware engineering on prototype bench testing and PCB assembly, evaluating component selection and resistor placement through manual soldering and crimping.</li>
-              <li>Built an automated Jira tracking dashboard utilizing custom JQL filters to mitigate deal-critical blockers across 1,000+ tickets, partnering with international Power BI teams to streamline executive roadmap reporting.</li>
-            </ul>
-          </div>
 
-          <div class="experience-item">
-            <div class="exp-header">
-              <div class="exp-role">Product Manager Intern &middot; <span class="exp-company">MedLaunch Concepts</span></div>
-              <div class="exp-date">Aug 2025 &ndash; Jan 2026</div>
+            <!-- Card 3: MedLaunch Concepts -->
+            <div class="media-card" data-modal="medlaunch">
+              <div class="card-thumb thumb-medlaunch">
+                <div class="thumb-badge">HEALTHCARE TECH</div>
+                <div class="thumb-content">
+                  <div class="thumb-company">MedLaunch Concepts</div>
+                  <div class="thumb-title">Product Manager Intern</div>
+                  <div class="thumb-date">Aug 2025 &ndash; Jan 2026</div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta-line">
+                  <span class="card-match">97% Match</span>
+                  <span class="card-pill">500+ Users</span>
+                  <span class="card-pill">95% QA</span>
+                </div>
+                <div class="card-quick-desc">
+                  Hospital accreditation portal &bull; Led QA team of 4&ndash;6 &bull; Coordinated cybersecurity compliance for live demos.
+                </div>
+              </div>
             </div>
-            <ul class="exp-details">
-              <li>Assisted the Product Manager in developing an accreditation portal serving 500+ users across multiple hospital departments.</li>
-              <li>Led a Quality Assurance (QA) team of 4&ndash;6 members overseeing testing workflows, achieving 95% compliance with healthcare standards.</li>
-              <li>Supported project milestone planning and coordinated with cybersecurity teams to ensure end-to-end security compliance for live client demos.</li>
-            </ul>
-          </div>
 
-          <div class="experience-item">
-            <div class="exp-header">
-              <div class="exp-role">Information Technology Intern &middot; <span class="exp-company">UF Research Information Services</span></div>
-              <div class="exp-date">Aug 2023 &ndash; Present</div>
+            <!-- Card 4: UF Research IT -->
+            <div class="media-card" data-modal="uf-it">
+              <div class="card-thumb thumb-uf">
+                <div class="thumb-badge">ENTERPRISE IT</div>
+                <div class="thumb-content">
+                  <div class="thumb-company">UF Research Info Services</div>
+                  <div class="thumb-title">Information Technology Intern</div>
+                  <div class="thumb-date">Aug 2023 &ndash; Present</div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta-line">
+                  <span class="card-match">96% Match</span>
+                  <span class="card-pill">200+ Faculty</span>
+                  <span class="card-pill">Salesforce</span>
+                </div>
+                <div class="card-quick-desc">
+                  Diagnosed network/hardware issues &bull; Salesforce ticket liaison &bull; Secure computer imaging &amp; provisioning.
+                </div>
+              </div>
             </div>
-            <ul class="exp-details">
-              <li>Provided technical support to 200+ faculty members by diagnosing and resolving hardware, software, and network issues.</li>
-              <li>Managed IT support tickets via Salesforce, serving as the primary liaison between end users and technical teams to resolve requests efficiently.</li>
-              <li>Wiped, reimaged, and provisioned computers for faculty and staff, ensuring configurations complied with university data security standards.</li>
-            </ul>
-          </div>
 
+          </div>
         </div>
       </section>
 
-      <!-- Projects -->
-      <section id="projects">
-        <div class="section-label">Selected Projects</div>
-        <div class="project-list">
+      <!-- Row 2: Featured Projects -->
+      <section id="projects" class="row-section">
+        <h2 class="row-title">Original Series <span class="row-subtitle">&mdash; Featured Builds</span></h2>
+        <div class="row-scroll-container">
+          <div class="cards-track">
 
-          <div class="project-item">
-            <div class="project-title">Automated Security &amp; Compliance Gap Analyzer</div>
-            <p class="project-desc">
-              Spearheaded an AI-driven workflow leveraging Python and LLM APIs to ingest operational policies and automatically flag missing compliance controls, reducing manual QA audits. Authored a comprehensive PRD and managed version control on GitHub, defining time-to-first-value metrics and strategic trade-offs for AI integrations.
+            <!-- Project 1: AI Compliance Gap Analyzer -->
+            <div class="media-card" data-modal="proj-compliance">
+              <div class="card-thumb thumb-proj1">
+                <div class="thumb-badge">AI &bull; LLM &bull; PRD</div>
+                <div class="thumb-content">
+                  <div class="thumb-company">Original Build</div>
+                  <div class="thumb-title">Security &amp; Compliance Gap Analyzer</div>
+                  <div class="thumb-date">Python &bull; Streamlit &bull; GitHub</div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta-line">
+                  <span class="card-match">99% Match</span>
+                  <span class="card-pill">AI Automation</span>
+                </div>
+                <div class="card-quick-desc">
+                  AI-driven workflow ingesting operational policies to flag missing controls. Includes PRD, trade-off analysis &amp; metrics.
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2: Hardware Vulnerability Dashboard -->
+            <div class="media-card" data-modal="proj-hardware">
+              <div class="card-thumb thumb-proj2">
+                <div class="thumb-badge">DATA &bull; PERIPHERALS</div>
+                <div class="thumb-content">
+                  <div class="thumb-company">Original Build</div>
+                  <div class="thumb-title">Hardware Vulnerability Triage Dashboard</div>
+                  <div class="thumb-date">SQL &bull; Pandas &bull; Python</div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta-line">
+                  <span class="card-match">98% Match</span>
+                  <span class="card-pill">10,000+ Logs</span>
+                </div>
+                <div class="card-quick-desc">
+                  Pipeline analyzing 10k+ peripheral connection logs to visualize threat vectors while balancing OTG security with productivity.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 3: Skills & Tech -->
+      <section id="skills" class="row-section">
+        <h2 class="row-title">Trending in Technical Stack <span class="row-subtitle">&mdash; Tools &amp; Methods</span></h2>
+        <div class="skills-grid-netflix">
+          <div class="skill-category-card">
+            <div class="category-icon">&#128202;</div>
+            <div class="category-title">Product &amp; Delivery</div>
+            <div class="category-tags">
+              <span>PRD Authoring</span>
+              <span>Jira &amp; Custom JQL</span>
+              <span>Power BI</span>
+              <span>Agile / Scrum</span>
+              <span>Hardware Prototyping</span>
+              <span>QA &amp; Compliance</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <div class="category-icon">&#128187;</div>
+            <div class="category-title">Data &amp; Development</div>
+            <div class="category-tags">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>Pandas</span>
+              <span>Streamlit</span>
+              <span>Matplotlib / Seaborn</span>
+              <span>C++</span>
+              <span>R</span>
+              <span>Git &amp; GitHub</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <div class="category-icon">&#128272;</div>
+            <div class="category-title">Enterprise &amp; Systems</div>
+            <div class="category-tags">
+              <span>OTG Perimeter Security</span>
+              <span>Hardware Bench Testing</span>
+              <span>PCB Assembly / Soldering</span>
+              <span>Salesforce</span>
+              <span>Workstation Imaging</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Row 4: Education & Honors -->
+      <section id="education" class="row-section">
+        <h2 class="row-title">Critically Acclaimed <span class="row-subtitle">&mdash; Education &amp; Honors</span></h2>
+        <div class="edu-netflix-card">
+          <div class="edu-badge-icon">&#127891;</div>
+          <div class="edu-content">
+            <div class="edu-title">University of Florida &mdash; Warrington College of Business</div>
+            <div class="edu-degree">Bachelor of Science in Business Administration, Information Systems</div>
+            <div class="edu-details-line">
+              <span class="edu-highlight">GPA: 3.6 / 4.0</span> &bull; Expected May 2027 &bull; Gainesville, FL
+            </div>
+            <p class="edu-scholarship">
+              Florida Bright Futures Florida Academic Scholars (FAS) Scholarship
             </p>
-            <div class="pills">
-              <span class="pill">Python</span>
-              <span class="pill">Streamlit</span>
-              <span class="pill">LLM API</span>
-              <span class="pill">PRD</span>
-              <span class="pill">GitHub</span>
-            </div>
-          </div>
-
-          <div class="project-item">
-            <div class="project-title">Hardware Vulnerability Triage Dashboard</div>
-            <p class="project-desc">
-              Developed a simulated data pipeline leveraging SQL and Pandas to process 10,000+ peripheral connection logs and visualize endpoint threat vectors via Matplotlib and Seaborn. Engineered prototype logic in Python to define guardrail metrics and apply statistical models, balancing perimeter hardware security with user productivity.
-            </p>
-            <div class="pills">
-              <span class="pill">Python</span>
-              <span class="pill">SQL</span>
-              <span class="pill">Pandas</span>
-              <span class="pill">Matplotlib / Seaborn</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Education & Skills -->
-      <section id="education">
-        <div class="section-label">Education &amp; Background</div>
-
-        <div class="info-block">
-          <div class="info-title">University of Florida &mdash; Warrington College of Business</div>
-          <div class="info-sub">Bachelor of Science in Business Administration, Information Systems &middot; Expected May 2027</div>
-          <p style="font-size: 0.92rem; color: var(--text-muted);">
-            GPA: 3.6 &middot; Florida Bright Futures Florida Academic Scholars (FAS)
-          </p>
-        </div>
-
-        <div class="skills-row">
-          <div class="skills-category">
-            <strong>Product &amp; Delivery:</strong> PRD Authoring, Jira / JQL, Power BI, Agile / Scrum, QA Compliance Workflows, Hardware Prototyping
-          </div>
-          <div class="skills-category">
-            <strong>Technical Stack:</strong> Python, SQL, C++, R, Pandas, Streamlit, Matplotlib, Seaborn, Git / GitHub, Salesforce
           </div>
         </div>
       </section>
-    </main>
 
-    <footer>
-      <div>Sairaj Pulaparthi &copy; 2026</div>
-      <div>
-        <a href="mailto:sairajpulaparthi@ufl.edu">sairajpulaparthi@ufl.edu</a> &middot;
-        <a href="tel:+18136199614">(813) 619-9614</a>
+      <!-- Row 5: Contact & Socials -->
+      <section id="contact" class="row-section contact-row">
+        <h2 class="row-title">Ready to Add Sairaj to Your Team?</h2>
+        <p class="contact-sub">Available for Product Management and Technical Program Management opportunities.</p>
+        <div class="contact-btn-group">
+          <a href="mailto:sairajpulaparthi@ufl.edu" class="btn btn-primary-play">
+            <span class="icon">&#9993;</span> Email Sairaj
+          </a>
+          <a href="tel:+18136199614" class="btn btn-secondary-info">
+            <span class="icon">&#9742;</span> (813) 619-9614
+          </a>
+          <a href="https://www.linkedin.com/in/sairaj-pulaparthi/" target="_blank" rel="noopener" class="btn btn-secondary-info">
+            LinkedIn Profile &nearr;
+          </a>
+          <a href="https://github.com/SairajPulaparthi1" target="_blank" rel="noopener" class="btn btn-secondary-info">
+            GitHub Repositories &nearr;
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="netflix-footer">
+      <div class="footer-meta">
+        <p>Questions? Contact <a href="mailto:sairajpulaparthi@ufl.edu">sairajpulaparthi@ufl.edu</a></p>
+        <div class="footer-links">
+          <button id="switchProfileBtn" class="footer-profile-switch">Switch Profile</button>
+          <span>&bull;</span>
+          <span>Gainesville &amp; Tampa, FL</span>
+          <span>&bull;</span>
+          <span>&copy; 2026 Sairaj Pulaparthi</span>
+        </div>
       </div>
     </footer>
   </div>
 
-  <script>
-    const themeBtn = document.getElementById('themeToggle');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // Set initial theme based on system preference
-    if (prefersDark) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
+  <!-- INTERACTIVE MODAL DIALOG (Netflix Detail Pop-Up) -->
+  <div id="detailModal" class="modal-overlay hidden" aria-hidden="true" role="dialog">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close details">&times;</button>
+      <div class="modal-banner" id="modalBanner">
+        <div class="modal-banner-gradient"></div>
+        <div class="modal-banner-content">
+          <div class="modal-badge" id="modalBadge">CASE STUDY</div>
+          <h2 class="modal-title" id="modalTitle">Role Title</h2>
+          <div class="modal-meta-line" id="modalMeta">
+            <span class="match-score">99% Match</span>
+            <span id="modalDate">Dates</span>
+            <span class="badge-tag" id="modalTag">Product Management</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body-content">
+        <div class="modal-company-line" id="modalCompany">Company Name &bull; Location</div>
+        <div class="modal-bullet-section">
+          <h3>Key Highlights &amp; Accomplishments</h3>
+          <ul id="modalBullets" class="modal-bullets"></ul>
+        </div>
+        <div class="modal-tags-section">
+          <h3>Competencies &amp; Technologies</h3>
+          <div id="modalPills" class="pills-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    themeBtn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
