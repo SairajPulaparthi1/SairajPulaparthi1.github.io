@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sairaj Pulaparthi | Product Management &amp; Information Systems Portfolio</title>
+  <meta name="description" content="Portfolio of Sairaj Pulaparthi — Product Manager Intern at OPSWAT, Information Systems student at the University of Florida Warrington College of Business." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-secondary: #111827;
+      --bg-card: rgba(17, 24, 39, 0.78);
+      --text-primary: #f9fafb;
+      --text-secondary: #9ca3af;
+      --text-muted: #6b7280;
+      --accent: #3b82f6;
+      --accent-hover: #60a5fa;
+      --accent-glow: rgba(59, 130, 246, 0.18);
+      --accent-secondary: #10b981;
+      --border: rgba(255, 255, 255, 0.09);
+      --nav-bg: rgba(11, 15, 25, 0.85);
+      --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #f8fafc;
+      --bg-secondary: #f1f5f9;
+      --bg-card: #ffffff;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --accent-glow: rgba(37, 99, 235, 0.1);
+      --accent-secondary: #059669;
+      --border: rgba(15, 23, 42, 0.09);
+      --nav-bg: rgba(248, 250, 252, 0.88);
+      --shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.65;
+      transition: background-color 0.25s ease, color 0.25s ease;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    /* Sticky Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .theme-btn {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      padding: 0.45rem 0.75rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .theme-btn:hover {
+      border-color: var(--accent);
+    }
+
+    /* Main Container */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding-top: 8.5rem;
+      padding-bottom: 5.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      background: var(--accent-glow);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: var(--accent-hover);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      width: fit-content;
+    }
+
+    .status-pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-secondary);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.75rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 720px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.35rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--text-primary);
+      transform: translateY(-1px);
+    }
+
+    /* Quick Metrics Strip */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .metric-value {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .metric-label {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-top: 0.25rem;
+    }
+
+    /* Section Headings */
+    .section-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-size: 1.85rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    /* Timeline / Experience */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .card-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .role-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .company-name {
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .meta-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      background: var(--bg-secondary);
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .bullet-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 1.25rem;
+      color: var(--text-secondary);
+      font-size: 0.96rem;
+    }
+
+    .bullet-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .bullet-list li strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      background: var(--accent-glow);
+      color: var(--accent-hover);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+    }
+
+    /* Skills & Education Grid */
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer / Contact */
+    footer {
+      padding: 4rem 0;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hero {
+        padding-top: 6.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="#top" class="brand">
+        <span class="brand-dot"></span>
+        Sairaj Pulaparthi
+      </a>
+      <ul class="nav-links">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education &amp; Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle color theme">Light / Dark</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="status-badge">
+        <span class="status-pulse"></span>
+        Product Management &bull; Cybersecurity &bull; Hardware &amp; AI Systems
+      </div>
+      <h1>Hi, I'm <span>Sairaj Pulaparthi</span>.</h1>
+      <p class="hero-subtitle">
+        Product Manager Intern II at <a href="https://www.opswat.com/" target="_blank" rel="noopener">OPSWAT</a> and Information Systems student at the <a href="https://warrington.ufl.edu/" target="_blank" rel="noopener">University of Florida Warrington College of Business</a>. I bridge B2B cybersecurity, hardware architecture, and data-driven product execution to ship zero-to-one enterprise solutions.
+      </p>
+      <div class="hero-actions">
+        <a href="mailto:sairajpulaparthi@ufl.edu" class="btn btn-primary">Get in Touch</a>
+        <a href="https://www.linkedin.com/in/sairaj-pulaparthi/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn Profile &nearr;</a>
+        <a href="https://github.com/SairajPulaparthi1" target="_blank" rel="noopener" class="btn btn-secondary">GitHub &nearr;</a>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value">0 &rarr; 1</div>
+          <div class="metric-label">Hardware &amp; Media Firewall Product Redesign at OPSWAT</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">1,000+</div>
+          <div class="metric-label">Jira Tickets Tracked via Custom JQL Deal-Blocker Dashboard</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">500+</div>
+          <div class="metric-label">Hospital Portal Users Supported at 95% QA Compliance</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">3.6 GPA</div>
+          <div class="metric-label">B.S.B.A. Information Systems at UF (Bright Futures FAS)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="experience">
+      <div class="section-header">
+        <div class="section-eyebrow">Career Track</div>
+        <h2 class="section-title">Work Experience</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="role-title">Product Manager Intern II</div>
+              <div class="company-name"><a href="https://www.opswat.com/products/metadefender" target="_blank" rel="noopener">OPSWAT</a> &bull; Tampa, FL / Remote</div>
+            </div>
+            <span class="meta-pill">August 2025 &ndash; Present</span>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>MetaDefender Media Firewall Redesign:</strong> Own the end-to-end redesign of the MetaDefender Media Firewall, defining next-generation product requirements, feature specifications, and backlog tasks.</li>
+            <li><strong>Zero-to-One Workstation Scanner:</strong> Led zero-to-one development of a personal workstation scanner that sanitizes and securely delivers files through an inline OTG connection.</li>
+            <li><strong>Hardware Architecture Iteration:</strong> Drive hardware architecture iterations from an initial Radxa Rock 5T prototype to the Media Firewall board, transitioning into an in-progress custom BCM-based revision.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="role-title">Product Manager Intern I</div>
+              <div class="company-name"><a href="https://www.opswat.com/" target="_blank" rel="noopener">OPSWAT</a> &bull; Tampa, FL</div>
+            </div>
+            <span class="meta-pill">May 2025 &ndash; August 2025</span>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>Cross-Functional Product Specs:</strong> Translated B2B customer requirements into actionable product specifications across core MetaDefender offerings (Kiosk, Endpoint, Firewall, Drive), aligning cross-functional teams on roadmap delivery.</li>
+            <li><strong>Hardware Prototyping &amp; PCB Assembly:</strong> Partnered with hardware engineering on prototype bench testing and PCB assembly involved in evaluating component selection and resistor placement through manual soldering and crimping.</li>
+            <li><strong>Executive Roadmap &amp; Deal-Blocker Automation:</strong> Built an automated Jira tracking dashboard utilizing custom JQL filters to mitigate deal-critical blockers across 1,000+ tickets, partnering with international Power BI teams to streamline executive roadmap reporting.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="role-title">Product Manager Intern</div>
+              <div class="company-name">MedLaunch Concepts &bull; Clearwater, FL</div>
+            </div>
+            <span class="meta-pill">August 2025 &ndash; January 2026</span>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>Healthcare Accreditation Portal:</strong> Assisted the Product Manager in developing an accreditation portal serving 500+ users across multiple hospital departments.</li>
+            <li><strong>Quality Assurance Leadership:</strong> Led a QA team of 4&ndash;6 members overseeing testing workflows, achieving 95% compliance with healthcare standards.</li>
+            <li><strong>Security &amp; Milestone Execution:</strong> Supported project milestone planning and coordinated with cybersecurity teams to ensure end-to-end security compliance for live client demos.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="role-title">Information Technology Intern</div>
+              <div class="company-name">University of Florida Research Information Services &bull; Gainesville, FL</div>
+            </div>
+            <span class="meta-pill">August 2023 &ndash; Present</span>
+          </div>
+          <ul class="bullet-list">
+            <li><strong>Faculty Technical Support:</strong> Provided technical support to 200+ faculty members by diagnosing and resolving hardware, software, and network issues.</li>
+            <li><strong>Service Operations:</strong> Managed IT support tickets via Salesforce, serving as the primary liaison between end users and technical teams to resolve requests efficiently.</li>
+            <li><strong>Endpoint Provisioning &amp; Security:</strong> Wiped, reimaged, and provisioned computers for faculty and staff, ensuring configurations complied with university data security standards.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects">
+      <div class="section-header">
+        <div class="section-eyebrow">Technical &amp; Product Builds</div>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+        <div class="card">
+          <div class="card-header">
+            <div class="role-title">Automated Security &amp; Compliance Gap Analyzer</div>
+          </div>
+          <ul class="bullet-list">
+            <li>Spearheaded an AI-driven workflow using Python and LLM APIs to ingest operational policies and automatically flag missing compliance controls, reducing manual QA audits.</li>
+            <li>Authored a comprehensive PRD and managed version control via GitHub, defining time-to-first-value metrics and strategic trade-offs for AI integrations.</li>
+          </ul>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">LLM API</span>
+            <span class="tag">PRD</span>
+            <span class="tag">GitHub</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="role-title">Hardware Vulnerability Triage Dashboard</div>
+          </div>
+          <ul class="bullet-list">
+            <li>Developed a simulated data pipeline using SQL and Pandas to process 10,000+ peripheral connection logs and visualize endpoint threat vectors via Matplotlib and Seaborn.</li>
+            <li>Engineered prototype logic in Python to define guardrail metrics and apply statistical models, balancing strict OTG hardware perimeter security with user productivity.</li>
+          </ul>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Seaborn</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Technical Skills -->
+    <section id="education">
+      <div class="section-header">
+        <div class="section-eyebrow">Academic &amp; Technical Foundation</div>
+        <h2 class="section-title">Education &amp; Core Competencies</h2>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="role-title">University of Florida</div>
+              <div class="company-name"><a href="https://warrington.ufl.edu/" target="_blank" rel="noopener">Warrington College of Business</a> &bull; Gainesville, FL</div>
+            </div>
+            <span class="meta-pill">Expected May 2027</span>
+          </div>
+          <p style="color: var(--text-primary); font-weight: 600; margin-bottom: 0.75rem;">
+            Bachelor of Science in Business Administration, Information Systems
+          </p>
+          <ul class="bullet-list">
+            <li><strong>GPA:</strong> 3.6</li>
+            <li><strong>Honors &amp; Awards:</strong> Florida Bright Futures Florida Academic Scholars (FAS) Scholarship</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="role-title" style="margin-bottom: 1rem;">Product &amp; Technical Toolkit</div>
+          <div class="skill-group">
+            <div class="skill-group-title">Product Management &amp; Operations</div>
+            <div class="tag-list" style="margin-top: 0.4rem;">
+              <span class="tag">PRD Authoring</span>
+              <span class="tag">Jira &amp; Custom JQL</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Agile / Scrum</span>
+              <span class="tag">QA Compliance</span>
+              <span class="tag">Hardware Prototyping</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-title">Programming &amp; Data Stack</div>
+            <div class="tag-list" style="margin-top: 0.4rem;">
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">C++</span>
+              <span class="tag">R</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">Matplotlib / Seaborn</span>
+              <span class="tag">Salesforce</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <main>
+      <h2 class="section-title" style="margin-bottom: 0.5rem;">Let's Connect</h2>
+      <p>Open to Product Management, Technical Program Management, and Information Systems opportunities.</p>
+      <div class="contact-links">
+        <a href="mailto:sairajpulaparthi@ufl.edu" class="btn btn-primary">sairajpulaparthi@ufl.edu</a>
+        <a href="tel:+18136199614" class="btn btn-secondary">(813) 619-9614</a>
+        <a href="https://www.linkedin.com/in/sairaj-pulaparthi/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+        <a href="https://github.com/SairajPulaparthi1" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.82rem; margin-top: 2rem;">
+        &copy; 2026 Sairaj Pulaparthi &bull; Gainesville &amp; Tampa, FL
+      </p>
+    </main>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlEl = document.documentElement;
+    themeToggle.addEventListener('click', () => {
+      const current = htmlEl.getAttribute('data-theme');
+      htmlEl.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>
