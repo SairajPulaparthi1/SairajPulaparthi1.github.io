@@ -17,4 +17,4 @@ Personal portfolio website showcasing product management experience, hardware an
 - `resume.pdf`: resume shown in the on-page viewer
 
 ## Updating
-Edit the files and push to `main`. GitHub Pages republishes the site in about a minute.
+Edit the files and push to `main`. GitHub Pages republishes the site in about a minute. When you change `script.js` or `style.css`, bump the `?v=` number on their links in `index.html` so browsers don't keep an old cached copy.
