@@ -15,9 +15,10 @@ const modalData = {
     bullets: [
       'On the court: I play pickleball and basketball every week.',
       'Fantasy football: I play, so fall weekends mean setting lineups and checking scores.',
+      "Gators fan: you'll find me cheering on the Florida Gators. Go Gators! 🐊",
       'Favorite movies: The Social Network and Forrest Gump.'
     ],
-    pills: ['Pickleball', 'Basketball', 'Fantasy Football', 'The Social Network', 'Forrest Gump']
+    pills: ['Pickleball', 'Basketball', 'Fantasy Football', 'Florida Gators', 'The Social Network', 'Forrest Gump']
   },
   'opswat-pm2': {
     badge: 'OPSWAT',
