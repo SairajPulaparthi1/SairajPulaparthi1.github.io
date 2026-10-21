@@ -4,6 +4,21 @@
 // ==========================================================================
 
 const modalData = {
+  'about-me': {
+    badge: 'ABOUT ME',
+    title: 'Off the Clock',
+    company: 'Sairaj Pulaparthi • Gainesville & Tampa, FL',
+    tag: 'Personal',
+    date: 'Hobbies & favorites',
+    h1: "What I'm into",
+    h2: 'Quick picks',
+    bullets: [
+      'On the court: I play pickleball and basketball every week.',
+      'Fantasy football: I play, so fall weekends mean setting lineups and checking scores.',
+      'Favorite movies: The Social Network and Forrest Gump.'
+    ],
+    pills: ['Pickleball', 'Basketball', 'Fantasy Football', 'The Social Network', 'Forrest Gump']
+  },
   'opswat-pm2': {
     badge: 'OPSWAT',
     title: 'Product Manager Intern II',
@@ -246,6 +261,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = modalData[key];
     if (!data) return;
 
+    const mh1 = document.getElementById('modalH1'), mh2 = document.getElementById('modalH2');
+    if (mh1) mh1.textContent = data.h1 || 'Key Responsibilities & Highlights';
+    if (mh2) mh2.textContent = data.h2 || 'Technologies & Competencies';
     modalBadge.textContent = data.badge;
     modalTitle.textContent = data.title;
     modalCompany.textContent = data.company;
