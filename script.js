@@ -98,6 +98,25 @@ const modalData = {
     ],
     pills: ['JavaScript', 'Node.js', 'Local-First', 'Kanban Board', '⌘K Search', 'Markdown', 'CLI']
   },
+  'proj-blockwise': {
+    badge: 'TECHNICAL BUILD',
+    title: 'Blockwise — Priority-Based Scheduler',
+    company: 'Technical Project (JavaScript, HTML, CSS, Browser App)',
+    tag: 'Planning / Productivity',
+    date: 'JavaScript • HTML • Zero Install',
+    bullets: [
+      'Built Blockwise, a personal scheduler for students that ranks work by priority and time needed (importance × hours left ÷ days left) instead of only by due date.',
+      'Designed a layered planning engine: classes, exams and interviews first, then protected routines (gym, meals, a weekly club, downtime after 8pm), then work sessions fitted into what is left under a daily focus cap.',
+      'Made every block explainable: each one carries a plain-language reason, and a daily briefing shows open time, the top priority, and what slips if today\'s block is skipped.',
+      'Connected prep to events automatically: an interview creates a tailored prep plan and an exam creates a study plan ten days out, and both move when the event moves.',
+      'Added a 7-day pressure meter, at-risk warnings, multi-stage tasks with group-meeting gates, a recruiting pipeline, and check-ins that track estimate vs. actual time.'
+    ],
+    links: [
+      { label: 'Try the live demo', url: 'https://sairajpulaparthi1.github.io/blockwise-demo/', primary: true },
+      { label: 'View on GitHub', url: 'https://github.com/SairajPulaparthi1/blockwise-demo' }
+    ],
+    pills: ['JavaScript', 'Scheduling Algorithm', 'Explainable UX', 'Prioritization', 'Product Design', 'Local Storage']
+  },
   'proj-brightside': {
     badge: 'TECHNICAL BUILD',
     title: 'Brightside PM Sim — Interactive Game',
