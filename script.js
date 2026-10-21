@@ -105,8 +105,8 @@ const modalData = {
     tag: 'Planning / Productivity',
     date: 'JavaScript • HTML • Zero Install',
     bullets: [
-      'Built Blockwise, a personal scheduler for students that ranks work by priority and time needed (importance × hours left ÷ days left) instead of only by due date.',
-      'Designed a layered planning engine: classes and exams first, then protected routines (gym, meals, a weekly club, downtime after 8pm), then work sessions fitted into what is left under a daily focus cap.',
+      'Built Blockwise, a personal scheduler for students that ranks work by priority and time needed (importance × hours left ÷ days left) instead of only by due date. The live demo runs on my own UF class schedule and routine.',
+      'Designed a layered planning engine: classes and exams first, then protected routines (gym, meals, recurring activities, downtime), then work sessions fitted into what is left under a daily focus cap.',
       'Made every block explainable: each one carries a plain-language reason, and a daily briefing shows open time, the top priority, and what slips if today\'s block is skipped.',
       'Connected study to exams automatically: every exam gets a study plan starting ten days out, assignments feed into it, and it moves when the exam moves.',
       'Added a 7-day pressure meter, at-risk warnings, multi-stage tasks with group-meeting gates, and check-ins that track estimate vs. actual time.'
