@@ -7,6 +7,7 @@ Personal portfolio website showcasing product management experience, hardware an
 ## Featured builds
 - **[Brightside PM Sim](https://sairajpulaparthi1.github.io/brightside-pm-sim/)**: a browser game that teaches product management by doing it. ([source](https://github.com/SairajPulaparthi1/brightside-pm-sim))
 - **[Docket](https://sairajpulaparthi1.github.io/docket-demo/)**: a personal, local-first ticket board. Live demo. ([source](https://github.com/SairajPulaparthi1/docket-demo))
+- **[McDonald's Kitchen Stock (example demo)](https://sairajpulaparthi1.github.io/kitchen-stock-demo/)**: ingredient stock, live "what can we make" counts per menu item, and a reorder list. ([source](https://github.com/SairajPulaparthi1/kitchen-stock-demo))
 - **[Blockwise](https://sairajpulaparthi1.github.io/blockwise-demo/)**: a scheduler that ranks work by priority and time needed and explains every block. Live demo. ([source](https://github.com/SairajPulaparthi1/blockwise-demo))
 
 ## Files

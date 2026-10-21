@@ -98,6 +98,24 @@ const modalData = {
     ],
     pills: ['JavaScript', 'Node.js', 'Local-First', 'Kanban Board', '⌘K Search', 'Markdown', 'CLI']
   },
+  'proj-kitchen': {
+    badge: 'TECHNICAL BUILD',
+    title: "McDonald's Kitchen Stock — Example Demo",
+    company: 'Technical Project (JavaScript, HTML, CSS, Browser App)',
+    tag: 'Restaurant Ops / Inventory',
+    date: 'JavaScript • HTML • Zero Install',
+    bullets: [
+      'Built an example demo of a kitchen stock tracker for a McDonald\'s-style restaurant. It is a concept piece, not an official McDonald\'s tool.',
+      'Replaced "ask a chatbot how many we have" with a direct view: every ingredient shows its count, a bar against its target level, and an In stock / Low / Out status, updated with one tap, a typed number, or a full-case delivery.',
+      'Linked ingredients to recipes so each menu item shows how many can be made right now and which ingredient is the bottleneck. Running out of mayo instantly drops the McChicken and Quarter Pounder Deluxe to zero.',
+      'Added planning ("80 Big Macs today" shows exactly what you would be short), sales that deduct ingredients, and a reorder list sized in whole cases.'
+    ],
+    links: [
+      { label: 'Try the live demo', url: 'https://sairajpulaparthi1.github.io/kitchen-stock-demo/', primary: true },
+      { label: 'View on GitHub', url: 'https://github.com/SairajPulaparthi1/kitchen-stock-demo' }
+    ],
+    pills: ['JavaScript', 'Inventory Logic', 'Recipe Modeling', 'Operations UX', 'Product Design', 'Local Storage']
+  },
   'proj-blockwise': {
     badge: 'TECHNICAL BUILD',
     title: 'Blockwise — Priority-Based Scheduler',
