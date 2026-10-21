@@ -570,7 +570,7 @@ a {
 }
 
 .thumb-blockwise {
-  background: linear-gradient(135deg, #0c4a6e 0%, #0e7490 60%, #083344 100%);
+  background: radial-gradient(circle at 85% 15%, rgba(255, 90, 31, 0.55), transparent 45%), linear-gradient(135deg, #04070f 0%, #0a1a5c 70%, #0021a5 100%);
 }
 
 .thumb-badge {
