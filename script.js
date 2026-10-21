@@ -109,13 +109,13 @@ const modalData = {
       'Designed a layered planning engine: classes and exams first, then protected routines (gym, meals, recurring activities, downtime), then work sessions fitted into what is left under a daily focus cap.',
       'Made every block explainable: each one carries a plain-language reason, and a daily briefing shows open time, the top priority, and what slips if today\'s block is skipped.',
       'Connected study to exams automatically: every exam gets a study plan starting ten days out, assignments feed into it, and it moves when the exam moves.',
-      'Added a 7-day pressure meter, at-risk warnings, multi-stage tasks with group-meeting gates, and check-ins that track estimate vs. actual time.'
+      'Designed it for daily use: a Today screen with one "Up next" card and a focus timer, one-line task entry ("SQL homework 4210 due fri 2h" is parsed into course, date, time and type), quick check-ins, and a 7-day load meter.'
     ],
     links: [
       { label: 'Try the live demo', url: 'https://sairajpulaparthi1.github.io/blockwise-demo/', primary: true },
       { label: 'View on GitHub', url: 'https://github.com/SairajPulaparthi1/blockwise-demo' }
     ],
-    pills: ['JavaScript', 'Scheduling Algorithm', 'Explainable UX', 'Prioritization', 'Product Design', 'Local Storage']
+    pills: ['JavaScript', 'Scheduling Algorithm', 'Natural-Language Input', 'Explainable UX', 'Product Design', 'Local Storage']
   },
   'proj-brightside': {
     badge: 'TECHNICAL BUILD',
