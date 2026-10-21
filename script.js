@@ -108,6 +108,24 @@ const modalData = {
     ],
     pills: ['JavaScript', 'Inventory Logic', 'Recipe Modeling', 'Operations UX', 'Product Design', 'Local Storage']
   },
+  'proj-pmtoolbox': {
+    badge: 'TECHNICAL BUILD',
+    title: 'PM Toolbox',
+    company: 'Technical Project (JavaScript, HTML, CSS, Browser App)',
+    tag: 'Product Management / Tools',
+    date: 'JavaScript • HTML • Zero Install',
+    bullets: [
+      'Built a free, no-sign-up toolbox with the eight tools a product manager reaches for most, all in one single-file web app.',
+      'Prioritization and experiments: a RICE scorer that ranks ideas live and exports CSV or Markdown, plus an A/B test calculator for sample size and test length, and a results checker with lift, p-value, confidence interval and a plain-English verdict.',
+      'Metrics: churn and retention, LTV, CAC payback and LTV:CAC with benchmark guidance, NPS, and a conversion funnel that flags the biggest drop-off.',
+      'Specs and planning: user stories with Given/When/Then criteria (copy for Jira), a one-page PRD with live preview and quality checks, a drag-and-drop Now/Next/Later roadmap, OKRs with scoring, and a launch checklist. Work saves in the browser with backup and restore.'
+    ],
+    links: [
+      { label: 'Open the toolbox', url: 'https://sairajpulaparthi1.github.io/pm-toolbox/', primary: true },
+      { label: 'View on GitHub', url: 'https://github.com/SairajPulaparthi1/pm-toolbox' }
+    ],
+    pills: ['JavaScript', 'RICE', 'A/B Test Statistics', 'Product Metrics', 'PRDs & User Stories', 'Roadmaps & OKRs']
+  },
   'proj-blockwise': {
     badge: 'TECHNICAL BUILD',
     title: 'Blockwise — Priority-Based Scheduler',

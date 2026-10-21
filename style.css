@@ -573,6 +573,10 @@ a {
   background: radial-gradient(circle at 85% 20%, rgba(255, 199, 44, 0.6), transparent 45%), linear-gradient(135deg, #8f1209 0%, #da291c 70%, #b71f14 100%);
 }
 
+.thumb-pmtoolbox {
+  background: radial-gradient(circle at 85% 20%, rgba(255, 122, 182, 0.55), transparent 45%), radial-gradient(circle at 10% 90%, rgba(70, 217, 163, 0.35), transparent 45%), linear-gradient(135deg, #1b2350 0%, #3a3a9e 60%, #6b4fd0 100%);
+}
+
 .thumb-blockwise {
   background: radial-gradient(circle at 85% 15%, rgba(255, 90, 31, 0.55), transparent 45%), linear-gradient(135deg, #04070f 0%, #0a1a5c 70%, #0021a5 100%);
 }
