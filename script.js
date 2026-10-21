@@ -56,30 +56,6 @@ const modalData = {
     ],
     pills: ['Salesforce', 'ITIL Support', 'Network Troubleshooting', 'Data Security Provisioning']
   },
-  'proj-compliance': {
-    badge: 'TECHNICAL BUILD',
-    title: 'Automated Security & Compliance Gap Analyzer',
-    company: 'Technical Project (Python, Streamlit, LLM API, GitHub)',
-    tag: 'AI / Automation',
-    date: 'Python • Streamlit • LLM API',
-    bullets: [
-      'Spearheaded an AI-driven workflow leveraging Python and LLM APIs to ingest operational policies and automatically flag missing compliance controls, reducing manual QA audits.',
-      'Authored a comprehensive PRD and managed version control via GitHub, defining time-to-first-value metrics and strategic trade-offs for AI integrations.'
-    ],
-    pills: ['Python', 'Streamlit', 'LLM API', 'PRD Authoring', 'Trade-off Analysis', 'GitHub']
-  },
-  'proj-hardware': {
-    badge: 'TECHNICAL BUILD',
-    title: 'Hardware Vulnerability Triage Dashboard',
-    company: 'Technical Project (Python, SQL, Pandas, Matplotlib, Seaborn)',
-    tag: 'Data Engineering',
-    date: 'Python • SQL • Pandas',
-    bullets: [
-      'Developed a simulated data pipeline leveraging SQL and Pandas to process 10,000+ peripheral connection logs and visualize endpoint threat vectors via Matplotlib and Seaborn.',
-      'Engineered prototype logic in Python to define guardrail metrics and apply statistical models, balancing strict OTG hardware perimeter security with user productivity.'
-    ],
-    pills: ['Python', 'SQL', 'Pandas', 'Matplotlib / Seaborn', 'Perimeter Security', 'Statistical Guardrails']
-  },
   'proj-docket': {
     badge: 'TECHNICAL BUILD',
     title: 'Docket — Local-First Ticket Board',
