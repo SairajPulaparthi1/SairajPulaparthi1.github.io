@@ -118,6 +118,7 @@ const modalData = {
       'Built a free, no-sign-up toolbox with the eight tools a product manager reaches for most, all in one single-file web app.',
       'Prioritization and experiments: a RICE scorer that ranks ideas live and exports CSV or Markdown, plus an A/B test calculator for sample size and test length, and a results checker with lift, p-value, confidence interval and a plain-English verdict.',
       'Metrics: churn and retention, LTV, CAC payback and LTV:CAC with benchmark guidance, NPS, and a conversion funnel that flags the biggest drop-off.',
+      'Added eight FAANG case studies (Google OKRs, HEART and launch checklist; Amazon PR/FAQ and one-way vs. two-way doors; Netflix A/B testing; Facebook\'s 7-friends activation metric; Apple Retail NPS), each sourced from public material and paired with a hands-on exercise in the matching tool.',
       'Specs and planning: user stories with Given/When/Then criteria (copy for Jira), a one-page PRD with live preview and quality checks, a drag-and-drop Now/Next/Later roadmap, OKRs with scoring, and a launch checklist. Work saves in the browser with backup and restore.'
     ],
     links: [
